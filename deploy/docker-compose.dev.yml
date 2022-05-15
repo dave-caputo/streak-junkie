@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  sj-postgres:
+    image: postgres:12
+    container_name: "sj-postgres"
+    restart: on-failure
+    environment:
+      - POSTGRES_USER=streaky_bacon
+      - POSTGRES_PASSWORD=FollowTheMoney
+      - POSTGRES_DB=sj_dev
+      - POSTGRES_INITDB_ARGS=--encoding='UTF-8'
+    ports:
+      - "5432:5432"
+    volumes:
+      - sj-postgres:/var/lib/postgresql/data
+
+volumes:
+    sj-postgres:
