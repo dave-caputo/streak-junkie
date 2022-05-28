@@ -1,7 +1,15 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
+import HomePage from "./HomePage";
 
-const App = (props) => <h1>Testing React Code: {props.name}</h1>;
+const App = (props) => (
+  <div>
+    <h1>Testing React Code: {props.name}</h1>
+    <React.StrictMode>
+      <HomePage />
+    </React.StrictMode>
+  </div>
+);
 
 const appDiv = document.getElementById("app");
 
