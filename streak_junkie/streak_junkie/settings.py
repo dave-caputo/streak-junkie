@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Custom apps
     "activities.apps.ActivitiesConfig",
+    "frontend.apps.FrontendConfig",
 ]
 
 MIDDLEWARE = [
